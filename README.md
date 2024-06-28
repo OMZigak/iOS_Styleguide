@@ -4,7 +4,8 @@ Swift Style Guide
 ![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
 [![Creative Commons License](https://img.shields.io/badge/license-CC--BY--4.0-blue.svg)](http://creativecommons.org/licenses/by/4.0/)
 
-StyleShare 구성원들이 Swift 코드를 이해하기 쉽고 명확하게 작성하기 위한 스타일 가이드입니다. 구성원들의 의사결정에 따라 수시로 변경될 수 있습니다.
+꾸물꿈 구성원들이 Swift 코드를 이해하기 쉽고 명확하게 작성하기 위해 StyleShare 스타일 가이드를 차용하여 생성한 가이드입니다. <br>
+꾸물꿈 iOS 컨벤션에 따라 일부 수정되었으며, 구성원들의 의사결정에 따라 수시로 변경될 수 있습니다.
 
 본 문서에 나와있지 않은 규칙은 아래 문서를 따릅니다.
 
@@ -120,22 +121,24 @@ StyleShare 구성원들이 Swift 코드를 이해하기 쉽고 명확하게 작�
 
 ### 최대 줄 길이
 
-- 한 줄은 최대 99자를 넘지 않아야 합니다.
+- 한 줄은 최대 100자를 넘지 않아야 합니다.
 
-    Xcode의 **Preferences → Text Editing → Display**의 'Page guide at column' 옵션을 활성화하고 99자로 설정하면 편리합니다.
+    Xcode의 **Preferences → Text Editing → Display**의 'Page guide at column' 옵션을 활성화하고 100자로 설정하면 편리합니다.
 
 ### 빈 줄
 
 - 빈 줄에는 공백이 포함되지 않도록 합니다.
 - 모든 파일은 빈 줄로 끝나도록 합니다.
-- MARK 구문 위와 아래에는 공백이 필요합니다.
+- MARK 구문 위와 아래에는 공백이 필요합니다. 구문 위는 2줄 공백, 아래는 1줄 공백을 추가합니다.
 
     ```swift
+    
     // MARK: Layout
 
     override func layoutSubviews() {
       // doSomething()
     }
+
 
     // MARK: Actions
 
@@ -143,7 +146,14 @@ StyleShare 구성원들이 Swift 코드를 이해하기 쉽고 명확하게 작�
       // doSomething()
     }
     ```
-    
+- 클래스 선언 시 프로퍼티는 클래스 바로 밑에 붙여서 선언합니다.
+
+  ```swift
+  final class ViewController: UIViewController { // 프로퍼티를 붙여서 선언
+    let nameLabel: UILabel
+  }
+  ```
+
 ### 임포트
 
 모듈 임포트는 알파벳 순으로 정렬합니다. 내장 프레임워크를 먼저 임포트하고, 빈 줄로 구분하여 서드파티 프레임워크를 임포트합니다.
